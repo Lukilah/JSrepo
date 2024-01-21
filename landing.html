@@ -14,27 +14,40 @@ body .navbar{
     margin-top: 50px;
     margin-left: 10px;
     display: flex;
-    justify-content: center;
 }
     
 .navbar li{
     font-family: 'Lora', sans-serif;
     font-size: 1.5em;
     display: inline-block;
-    margin-right: 15em;
+    margin-right: 18em;
+    
+}
+
+.navbar a{
+  font-family: 'Lora', sans-serif;
+    font-size: 1.5em;
+    display: inline-block;
+    
 }
 
 .navbar ul{
     list-style: none;
 }
 
-.navbar li:first-child {
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*.navbar li:first-child {
     margin-right:950px; 
 }
 
 .navbar li:last-child {
     margin-right: 0;
 }
+*/
 
 .introduction h1{
     font-family: 'Montserrat', serif;
@@ -57,8 +70,30 @@ body .navbar{
     margin-top: 0px;
     font-size: 22px;
     font-family: 'Lora', sans-serif;
+    
 }
 
+.name-link-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* This will push the content to the left */
+}
+
+.name-link-container a {
+  margin-left: 1em; /* Adjust the margin between name and LinkedIn link */
+}
+
+#dark-mode-toggle {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+
+
+
+/*.headings{
+  color: #2E8B57;
+}*/
 
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -98,7 +133,7 @@ body .navbar{
   
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
-    background-color: #2E8B57;
+    background-color: #1b263b;
     color: #98FB98;
     font-weight: bold;
   }
@@ -128,6 +163,16 @@ body .navbar{
   .flip-card.first-card{
     margin-left: 185px;
   }
+
+  .navbar ul li a{
+    text-decoration: none;
+  }
+
+  body.dark-mode {
+    background-color: #0d1b2a; /* Dark background color */
+    color: white; /* Light text color */
+  }
+
   
 
 </style>
@@ -137,23 +182,38 @@ body .navbar{
 
 
 <body>
-    <!--code for the navbar-->
-    <div class="navbar">
-        <ul>
-            <li>Alvin Lukilah</li>
-            <li>LinkedIn</li>
-        </ul>
-    </div>
+<!--code for the navbar-->
+<div class="navbar">
+  <!-- <ul>
+      <li>
+          <span class="name-link-container">
+              Alvin Lukilah
+              <a href="https://www.linkedin.com/in/alvin-lukilah-a7278521b/">LinkedIn</a>
+          </span>
+          <span id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</span>
+      </li>
+  </ul> -->
+<ul>
+  <li>Alvin Lukilah</li>
+  <li id="dark-mode-toggle" onclick="toggleDarkMode()">🌙</li>
+  <a href="https://www.linkedin.com/in/alvin-lukilah-a7278521b/">LinkedIn</a>
+</ul>
+
+
+
+</div>
+
+
     <br>
     <br>
     <!--code for the second part now-->
     <div class="introduction">
         <h1 class="headings">Welcome. It's a pleasure to meet you.</h1>
         <br>
-        <p class="about-me">Alvin Lukilah is a student with a penchant for UI/UX and design who began his career in the field in early 2022. 
-            He revels in bringing his ideas to life and using his imagination to create fresh views for websites and applications. 
+        <p class="about-me">I am a student with a penchant for UI/UX and design who began his career in the field in early 2022. 
+            I revels in bringing his ideas to life and using my imagination to create fresh views for websites and applications. 
             Whether it's colour schemes or typography, each piece serves a purpose, 
-            and he carefully selects each so as to improve the overall user experience on a website.</p>
+            and I carefully select each so as to improve the overall user experience on a website.</p>
         <h2 class="sub-headings">What can I do?</h2>
     </div>
 
@@ -194,12 +254,14 @@ body .navbar{
                 </div>
                 <div class="flip-card-back">
                     <p>Figma</p>
-                    <p>Photoshop (for mockups)</p>
+                    <p>Photoshop</p>
                     <p>Behance</p>
                 </div>
             </div>
         </div>
     
+        <script src="landing.js"></script>
+
 
 </body>
 
