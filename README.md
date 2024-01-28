@@ -1,6 +1,9 @@
 # JSrepo
 Place HTML, JS, CSS projects here
 
+#
+https://lukilah.github.io/JSrepo/
+
 
 #Assignment answers
 a) npm is a package manager for the JavaScript programming language (npm is the world's largest software registry.)
